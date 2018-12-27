@@ -1,0 +1,23 @@
+<form [formGroup]="accountFormGroup">
+  <table>
+    <tr>
+      <td>OpenDate</td>
+      <td>:</td>
+      <td><input type="text" placeholder="Open Date" formControlName="openDate"></td>
+    </tr>
+    <tr>
+        <td>Balance</td>
+        <td>:</td>
+       <td><input type="number" placeholder="Balance" formControlName="balance"></td>
+    </tr>
+    <tr>
+        <td>Customer Number</td>
+        <td>:</td>
+       <td><input type="number" placeholder="Customer Number" formControlName="customer"></td>
+    </tr>
+    <tr>
+      <td><button (click)='submitData()' >submit</button>
+      </td>
+    </tr>
+</table>
+</form>

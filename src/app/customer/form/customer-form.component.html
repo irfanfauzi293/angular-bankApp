@@ -1,0 +1,46 @@
+<form [formGroup]="customerFormGroup">
+  <table>
+    <tr>
+      <td>Firstname</td>
+      <td>:</td>
+      <td><input type="text" placeholder="first name" formControlName="firstName"></td>
+    </tr>
+    <tr>
+        <td>Lastname</td>
+        <td>:</td>
+       <td><input type="text" placeholder="last name" formControlName="lastName"></td>
+    </tr>
+    <tr>
+        <td>Username</td>
+        <td>:</td>
+       <td><input type="text" placeholder="username" formControlName="username"></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>:</td>
+       <td><input type="text" placeholder="password" formControlName="password"></td>
+    </tr>
+    <tr>
+        <td>Birthdate</td>
+        <td>:</td>
+       <td><input type="text" placeholder="birthdate" formControlName="birthDate"></td>
+    </tr>   
+    <tr>
+        <td>Phone Type</td>
+        <td>:</td>
+       <td><input type="text" placeholder="phone type" formControlName="phoneType"></td>
+    </tr>
+    <tr>
+        <td>Phone Number</td>
+        <td>:</td>
+       <td><input type="text" placeholder="phone number" formControlName="phoneNumber"></td>
+    </tr>
+    <tr>
+      <td><button (click)='submitData()' [disabled] ="customerFormGroup.invalid" >submit</button>
+      </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr> 
+</table>
+</form>

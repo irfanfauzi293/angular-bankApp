@@ -1,0 +1,34 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Phone Number</th>
+        <th>Phone type</th>
+        <th>Birth Date</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cust of listCustomer">
+        <td><a (click)= "selectCustomer(cust);"> {{cust.customerNumber}}</a> </td>
+        <td>{{cust.firstName}}</td>
+        <td>{{cust.lastName}}</td>
+        <td>{{cust.username}}</td>
+        <td>{{cust.password}}</td>
+        <td>{{cust.phoneNumber}}</td>
+        <td>{{cust.phoneType}}</td>
+        <td>{{cust.birthDate}}</td>
+        <td><button class="btn-danger" (click)= "deleteData(cust.customerNumber);">delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div align =center>
+  <app-customer-update #formCustomer *ngIf="showDetail" [customer]="selectedCustomer" (result)="prosesResult($event)"></app-customer-update>
+</div>
